@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:smart_dropdown/smart_dropdown.dart';
+import 'package:traitement_eau_potable/constants.dart';
 
 String dropdownValue = 'default';
 
@@ -39,7 +40,10 @@ class ModeDeFonctionnement extends StatelessWidget {
             ),
             Text(
               'Mode de Fonctionnement:',
-              style: TextStyle(fontSize: 24),
+              style: TextStyle(
+                  fontSize: 24,
+                  color: secondaryColor,
+                  fontWeight: FontWeight.bold),
             ),
             SizedBox(
               height: 50,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:traitement_eau_potable/constants.dart';
 import 'package:traitement_eau_potable/screens/mode_de_fonctionnement.dart';
 
 class PageScroll extends StatelessWidget {
@@ -27,6 +28,9 @@ class PageScroll extends StatelessWidget {
                               width: this.button_width,
                               height: this.button_height,
                               child: OutlinedButton(
+                                style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all(
+                                        secondaryColor)),
                                 onPressed: () {
                                   if (this.mode_fonctionnement) {
                                     Navigator.of(context).pushNamed(
@@ -36,7 +40,9 @@ class PageScroll extends StatelessWidget {
                                     Navigator.of(context).pushNamed(e);
                                   }
                                 },
-                                child: Text(e, style: TextStyle(fontSize: 18)),
+                                child: Text(e,
+                                    style: TextStyle(
+                                        fontSize: 18, color: textColor)),
                               )),
                           SizedBox(
                             height: 50,
