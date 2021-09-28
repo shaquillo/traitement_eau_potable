@@ -49,6 +49,7 @@ class Actionneur extends StatelessWidget {
         button_height: 100,
         button_width: MediaQuery.of(context).size.width * 0.8,
         mode_fonctionnement: true,
+        show_mode: true,
       ),
     );
   }

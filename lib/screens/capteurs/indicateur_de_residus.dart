@@ -20,6 +20,7 @@ class IndicateurDeResidus extends StatelessWidget {
         content: content,
         button_height: 100,
         button_width: MediaQuery.of(context).size.width * 0.8,
+        mode_fonctionnement: true,
       ),
     );
   }

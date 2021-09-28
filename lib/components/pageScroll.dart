@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:traitement_eau_potable/constants.dart';
+import 'package:traitement_eau_potable/model/mode.dart';
 import 'package:traitement_eau_potable/screens/mode_de_fonctionnement.dart';
 
 class PageScroll extends StatelessWidget {
@@ -7,7 +8,10 @@ class PageScroll extends StatelessWidget {
       {this.content,
       this.button_width,
       this.button_height,
-      this.mode_fonctionnement = false});
+      this.mode_fonctionnement = false,
+      this.show_mode = false});
+
+  final bool show_mode;
 
   final List<String> content;
   final double button_width;
@@ -35,7 +39,7 @@ class PageScroll extends StatelessWidget {
                                   if (this.mode_fonctionnement) {
                                     Navigator.of(context).pushNamed(
                                         ModeDeFonctionnement.routeName,
-                                        arguments: e);
+                                        arguments: Mode(e, this.show_mode));
                                   } else {
                                     Navigator.of(context).pushNamed(e);
                                   }
